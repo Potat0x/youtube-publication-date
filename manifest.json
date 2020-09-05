@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "youtube-publication-date",
+  "version": "0.1",
+  "description": "Workaround for hidden publication date",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "src/main.js"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@example.com",
+      "strict_min_version": "73.0a1"
+    }
+  },
+  "author": "Potat0x",
+  "permissions": []
+}

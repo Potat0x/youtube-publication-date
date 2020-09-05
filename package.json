@@ -1,0 +1,21 @@
+{
+  "name": "youtube-publication-date",
+  "version": "0.1.0",
+  "description": "Workaround for hidden publication date",
+  "main": "index.js",
+  "scripts": {
+    "start": "web-ext run"
+  },
+  "keywords": [
+    "youtube"
+  ],
+  "author": "Potat0x",
+  "license": "Mozilla Public License Version 2.0",
+  "homepage": "https://github.com/Potat0x",
+  "devDependencies": {
+    "web-ext": "^5.0.0"
+  },
+  "permissions": [
+    "https://www.youtube.com/*"
+  ]
+}
