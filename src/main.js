@@ -3,18 +3,19 @@ function getVideoTitle() {
 }
 
 function getTitleElement() {
-    return document.querySelector("h1.ytd-video-primary-info-renderer yt-formatted-string");
+    return document.querySelector(".title yt-formatted-string.ytd-video-primary-info-renderer");
 }
 
 function getPublicationDateElement() {
-    const a = document.querySelector("div#date yt-formatted-string.ytd-video-primary-info-renderer");
-    return a;
+    return document.querySelector("div#date yt-formatted-string.ytd-video-primary-info-renderer");
+}
+
+function getPublicationDate() {
+    return getPublicationDateElement().innerHTML;
 }
 
 function appendPublicationDateToTitle() {
-    const titleElement = getTitleElement();
-    const publicationDate = getPublicationDateElement().innerText;
-    titleElement.innerHTML = getVideoTitle() + "&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;" + publicationDate;
+    getTitleElement().innerHTML = getVideoTitle() + `&nbsp;&nbsp;|&nbsp;&nbsp;${getPublicationDate()}`;
 }
 
-setTimeout(appendPublicationDateToTitle, 2000);
+window.setInterval(appendPublicationDateToTitle, 2000);
